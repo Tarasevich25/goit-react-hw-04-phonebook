@@ -38,10 +38,6 @@ function App() {
     });
   };
 
-  const handleFilterChange = event => {
-    setFilter(event.target.value);
-  };
-
   const handleDeleteContact = contactId => {
     setContacts(prevContacts =>
       prevContacts.filter(({ id }) => id !== contactId)
@@ -60,7 +56,7 @@ function App() {
       <h1>Phonebook</h1>
       <PhonebookForm onSubmit={handleSubmit} handleChange={handleChange} />
       <h2>Contacts</h2>
-      <PhonebookFilter filter={filter} onFilterSet={handleFilterChange} />
+      <PhonebookFilter filter={filter} />
       <PhonebookContacts
         contacts={filteredContacts}
         onDeleteContact={handleDeleteContact}
