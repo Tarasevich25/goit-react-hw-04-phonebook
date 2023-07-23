@@ -7,9 +7,9 @@ import PhonebookFilter from './PhonebookFilter';
 import filterContacts from '../utils/filterContacts';
 
 function App() {
-  const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('contacts')) || []
-  );
+  const [contacts, setContacts] = useState(()=>
+    JSON.parse(localStorage.getItem('contacts')) ?? []
+  )
   const [filter, setFilter] = useState('');
 
   useEffect(() => {

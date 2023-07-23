@@ -2,7 +2,7 @@ import css from './PhonebookForm.module.css';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const PhonebookForm = ({ onSubmit, handleChange }) => {
+const PhonebookForm = ({ onSubmit}) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
