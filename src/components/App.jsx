@@ -54,9 +54,9 @@ function App() {
   return (
     <Container>
       <h1>Phonebook</h1>
-      <PhonebookForm onSubmit={handleSubmit} handleChange={handleChange} />
+      <PhonebookForm onSubmit={handleSubmit}/>
       <h2>Contacts</h2>
-      <PhonebookFilter filter={filter} />
+      <PhonebookFilter filter={filter} handleChange={handleChange} />
       <PhonebookContacts
         contacts={filteredContacts}
         onDeleteContact={handleDeleteContact}

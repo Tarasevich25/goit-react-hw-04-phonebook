@@ -20,7 +20,6 @@ const PhonebookFilter = ({handleChange, filter }) => {
 
 
 PhonebookFilter.propTypes = {
-  onFilterSet: PropTypes.func,
   handleChange: PropTypes.func,
   filter: PropTypes.string.isRequired,
 };
